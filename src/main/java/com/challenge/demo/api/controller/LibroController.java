@@ -39,7 +39,7 @@ public class LibroController {
     try {
         Integer id = libroService.saveLibro(libro); // Suponiendo que el método saveLibro devuelve el ID del libro guardado
         String mensaje = String.format("id: %d - Libro guardado exitosamente", id);
-        return ResponseEntity.ok(mensaje);
+        return ResponseEntity.ok(mensaje); //cambiar a formato JSON *****
     } catch (LibroNotFoundException e) {
         return ResponseEntity.badRequest().body(e.getMessage());
     } catch (DataAccessException e) {

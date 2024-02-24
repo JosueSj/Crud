@@ -3,8 +3,6 @@ package com.challenge.demo.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.challenge.demo.api.exception.LibroNotFoundException;
 import com.challenge.demo.api.model.Libro;
@@ -24,7 +22,7 @@ public class LibroService {
         return libroRepository.findAll(pageable);
     }
 
-    public Integer saveLibro(Libro libro) {
+    public Integer saveLibro(Libro libro) { //Devolver Entidad Libro y agregar try-catch ****
         validarLibro(libro);
         Libro libroGuardado = libroRepository.save(libro);
         return libroGuardado.getId();
