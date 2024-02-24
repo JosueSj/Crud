@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LibroRepository extends JpaRepository < Libro, Integer>{
-    Optional<Libro> findById(Integer id);
+    Optional<Libro> findById(Integer id); //modificar Option (reducir options) *********
 }
